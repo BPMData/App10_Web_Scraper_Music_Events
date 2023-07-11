@@ -30,7 +30,7 @@ extracted = str(extracted)
 current_time = time.time()
 
 # Could also try:
-# curent_time = datetime.datetime.now()
+# current_time = datetime.datetime.now()
 
 content_to_store = f"{current_time},{extracted}"
 # print(content_to_store, "this is the content to store")
