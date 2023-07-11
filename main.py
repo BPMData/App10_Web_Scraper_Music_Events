@@ -13,7 +13,7 @@ while True: # This is what you need to add to make the code run continously.
     main_page_source = scrape(main_url)
 
     #%% Extract the data and process it
-    extracted = extractit(main_page_source)
+    extracted = extract_beautiful(main_page_source)
     print(f"Extracted string was: {extracted}.")
     content = readit("data.txt")
     #%% Trigger e-mail delivery on certain conditions
