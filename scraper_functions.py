@@ -52,7 +52,12 @@ def store_sql(extracted_data, tablename):
     cursor.execute(f"INSERT INTO {tablename} VALUES(?,?,?)", extracted_data)
     connection.commit()
 
-
+def store_sql_specific(extracted_data, databasename, tablename):
+    database_name = "temp_db.db"
+    connection = sqlite3.connect(database_name)
+    cursor = connection.cursor()
+    cursor.execute(f"INSERT INTO {tablename} VALUES(?,?)", extracted_data)
+    connection.commit()
 
 def readit_filepath(savefilename2):
     with open(f"{savefilename2}", "r") as file:
