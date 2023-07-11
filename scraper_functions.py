@@ -15,14 +15,14 @@ def extractit(source):
     value = extractor.extract(source)["tours"]
     return value
 
-def extract_specific(source, keyname, css_selector):
-    desired_data = f"""
-    {keyname}:
-        css:{css_selector}
-    """
-    extractor = selectorlib.Extractor.from_yaml_string(desired_data)
-    value = extractor.extract(source)[f"{keyname}"]
-    return value
+# def extract_specific(source, keyname, css_selector):
+#     desired_data = f"""
+#     {keyname}:
+#         css:{css_selector}
+#     """
+#     extractor = selectorlib.Extractor.from_yaml_string(desired_data)
+#     value = extractor.extract(source)[f"{keyname}"]
+#     return value
 
 def extract_beautiful(source, css_selector):
     soup = BeautifulSoup(source, 'html.parser')
